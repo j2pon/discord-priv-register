@@ -1,18 +1,18 @@
-const { rexstaff, ucube, booster, ucubegif, rexfooter } = require('../config.json');
+const { j2ponstaff, ucube, booster, ucubegif, j2ponfooter } = require('../config.json');
 const { EmbedBuilder } = require('discord.js');
 
 module.exports = {
     name: 'ucube',
     async execute(message, args) {
-        if (!message.member.permissions.has('ADMINISTRATOR') && !message.member.roles.cache.has(rexstaff)) {
+        if (!message.member.permissions.has('ADMINISTRATOR') && !message.member.roles.cache.has(j2ponstaff)) {
             return message.reply('Bu komutu kullanma yetkiniz yok.');
         }
 
         const ucuberole = message.guild.roles.cache.get(ucube);
         const boosterrole = message.guild.roles.cache.get(booster);
 
-        const rex = args[0]?.replace(/[<@!>]/g, '');
-        if (!rex) {
+        const j2pon = args[0]?.replace(/[<@!>]/g, '');
+        if (!j2pon) {
             return message.reply('Lütfen ucube ilan etmek istediğiniz kişiyi etiketleyin ya da kullanıcı id\'sini giriniz.');
         }
 
@@ -29,8 +29,9 @@ module.exports = {
           .setTitle('UCUBÈLER DİYARI')
           .setImage(ucubegif)
           .setDescription(`${member.user.tag} kullanıcısı <@&${ucube}>'ler diyarına gönderildi.`)
-          .setFooter({ text: rexfooter });
+          .setFooter({ text: j2ponfooter });
 
         message.channel.send({ embeds: [ucubeembed] });
     },
 };
+
