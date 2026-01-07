@@ -6,13 +6,13 @@
     "kayitli" : "",
     "kayitsiz" : "",
     "vip" : "",
-    "rexstaff": "",
+    "j2ponstaff": "",
     "ucube" : "",
     "booster" : "",
     "emojitik" : "",
     "ucubegif" : "https://j.gifs.com/Mj9D5.gif",
-    "rexhelpgif" : "https://i.hizliresim.com/5eappo9.gif",
-    "rexfooter" : "",
+    "j2ponhelpgif" : "https://i.hizliresim.com/5eappo9.gif",
+    "j2ponfooter" : "",
     "rolver1" : "",
     "rolver2" : "",
     "rolver3" : "",
@@ -27,4 +27,5 @@
 
     }
 }
+
 
