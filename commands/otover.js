@@ -1,9 +1,9 @@
-const { kayitsiz, rexstaff } = require('../config.json');
+const { kayitsiz, j2ponstaff } = require('../config.json');
 
 module.exports = {
     name: 'otover',
     async execute(message, args) {
-        if (message.author.id !== rexstaff && !message.member.permissions.has('ADMINISTRATOR')) {
+        if (message.author.id !== j2ponstaff && !message.member.permissions.has('ADMINISTRATOR')) {
             return message.channel.send('Bu komutu kullanma yetkiniz yok.');
         }
 
@@ -25,3 +25,4 @@ module.exports = {
         message.channel.send(`Herkese başarıyla <@&${unregrole.id}> rolü verildi!`);
     },
 };
+
