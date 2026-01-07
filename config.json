@@ -1,7 +1,7 @@
 {
     "token" : "",
     "prefix" : "!",
-    "Aktivite" : "https://sadecerex.com/",
+    "Aktivite" : "",
     "AktiviteURL" : "https://twitch.tv/xxx",
     "kayitli" : "",
     "kayitsiz" : "",
@@ -9,10 +9,10 @@
     "rexstaff": "",
     "ucube" : "",
     "booster" : "",
-    "emojitik" : "<a:rexdev:1294016557122326589>",
+    "emojitik" : "",
     "ucubegif" : "https://j.gifs.com/Mj9D5.gif",
     "rexhelpgif" : "https://i.hizliresim.com/5eappo9.gif",
-    "rexfooter" : "https://sadecerex.com/",
+    "rexfooter" : "",
     "rolver1" : "",
     "rolver2" : "",
     "rolver3" : "",
@@ -27,3 +27,4 @@
 
     }
 }
+
