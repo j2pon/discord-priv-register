@@ -1,4 +1,4 @@
-const { rexstaff, kayitli, kayitsiz, emojitik } = require('../config.json');
+const { j2ponstaff, kayitli, kayitsiz, emojitik } = require('../config.json');
 
 module.exports = {
     name: 'kayit',
@@ -7,26 +7,26 @@ module.exports = {
             return message.channel.send('Bu komutu kullanmak için gerekli yetkin yok.');
         }
 
-        const rex = args[0]?.replace(/[<@!>]/g, '');
+        const j2pon = args[0]?.replace(/[<@!>]/g, '');
         if (!rex) {
             return message.channel.send('Lütfen kaydetmek istediğiniz kişiyi etiketleyin ya da kullanıcı id\'sini giriniz.');
         }
 
-        const member = await message.guild.members.fetch(rex).catch(() => null);
+        const member = await message.guild.members.fetch(j2pon).catch(() => null);
         if (!member) {
             return message.channel.send('Belirtilen kullanıcı bulunamadı.');
         }
 
-        const rexkayitli = message.guild.roles.cache.get(kayitli);
-        const rexkayitsiz = message.guild.roles.cache.get(kayitsiz);
+        const j2ponkayitli = message.guild.roles.cache.get(kayitli);
+        const j2ponkayitsiz = message.guild.roles.cache.get(kayitsiz);
 
-        if (!rexkayitli || !rexkayitsiz) {
+        if (!j2ponkayitli || !j2ponkayitsiz) {
             return message.channel.send('Rol(ler) bulunamadı.');
         }
 
         try {
-            await member.roles.add([rexkayitli]);
-            await member.roles.remove([rexkayitsiz]);
+            await member.roles.add([j2ponkayitli]);
+            await member.roles.remove([j2ponkayitsiz]);
             await message.react(emojitik);
         } catch (error) {
             console.error('Rol eklenirken bir hata oluştu:', error);
@@ -34,3 +34,4 @@ module.exports = {
         }
     },
 };
+
