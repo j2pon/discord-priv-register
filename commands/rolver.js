@@ -1,5 +1,5 @@
 const { ActionRowBuilder, StringSelectMenuBuilder, StringSelectMenuOptionBuilder, PermissionsBitField } = require('discord.js');
-const { rolver1, rolver2, rolver3, rexstaff } = require('../config.json');
+const { rolver1, rolver2, rolver3, j2ponstaff } = require('../config.json');
 
 module.exports = {
     name: 'rolver',
@@ -15,11 +15,11 @@ module.exports = {
 
            
             const hasAdminPermission = message.member.permissions.has(PermissionsBitField.Flags.Administrator);
-            const hasRexStaffRole = message.member.roles.cache.has(rexstaff);
+            const hasJ2ponStaffRole = message.member.roles.cache.has(j2ponstaff);
 
             
-            if (!hasAdminPermission && !hasRexStaffRole) {
-                return message.reply("Bu komutu kullanmak için yönetici veya 'rexstaff' rolüne sahip olmalısınız.");
+            if (!hasAdminPermission && !hasJ2ponStaffRole) {
+                return message.reply("Bu komutu kullanmak için yönetici veya 'j2ponstaff' rolüne sahip olmalısınız.");
             }
 
             
@@ -87,3 +87,4 @@ module.exports = {
         }
     }
 };
+
