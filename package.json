@@ -1,7 +1,7 @@
 {
-    "name": "rex",
+    "name": "discord-priv-register",
     "version": "1.0.0",
-    "description": "rex bebek bot",
+    "description": "j2pon reg bot",
     "main": "index.js",
     "scripts": {
         "start": "node index.js"
@@ -9,6 +9,7 @@
     "dependencies": {
         "discord.js": "^14.16.3"
     },
-    "author": "@rex",
+    "author": "@j2pon",
     "license": "ISC"
 }
+
